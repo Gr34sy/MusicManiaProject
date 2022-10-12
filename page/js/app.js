@@ -4,8 +4,8 @@ import { createRoot } from "react-dom/client";
 function App(){
     return(
         <>
-        <h1>dupa</h1> 
-        <h2>kupa</h2>
+        <h1></h1> 
+        <h2></h2>
         </>
     )
 }
