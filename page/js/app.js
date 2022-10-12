@@ -1,11 +1,15 @@
 import React from "react";
 import { createRoot } from "react-dom/client"; 
+import { Router, Routes, Route} from 'react-router-dom';
+import { Card } from "./Card";
 
 function App(){
     return(
         <>
-        <h1>dupa</h1> 
-        <h2>kupa</h2>
+        <div className="card-box">
+            <Card/>
+            <Card/>
+        </div>
         </>
     )
 }
