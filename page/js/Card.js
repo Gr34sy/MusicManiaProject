@@ -1,4 +1,5 @@
 import React from "react";
+import SimpleAccordion from "./Accordion";
 
 export function Card(){
     return(
@@ -70,6 +71,8 @@ export function Card(){
                 <a href="" className="sm-icon"><i className="fa-brands fa-square-instagram"></i></a>
                 <a href="" className="sm-icon"><i class="fa-brands fa-youtube"></i></a>
             </div>
+
+            <SimpleAccordion/>
         </div>
     )
 }
