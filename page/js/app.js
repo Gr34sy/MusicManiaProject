@@ -10,6 +10,8 @@ function App(){
         <div className="card-box">
             <Card/>
             <Card/>
+            <Card/>
+            <Card/>
         </div>
         </>
     )
