@@ -4,8 +4,8 @@ import LabTabs from "./LabTabs";
 export function Card(){
     return(
         <div className="card">
-            <figure style={{textAlign: 'center'}}>
-                <img src="../images/Hu wallpaper 2.jpg" alt="HU" style={{width:'100%',borderRadius: '15px'}}/>
+            <figure>
+                <img src="../images/Hu wallpaper 2.jpg" alt="HU" className="card__img"/>
                 <figcaption>
                     <h2 className="card__title">Hollywood Undead</h2>
                 </figcaption>

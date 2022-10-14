@@ -3,16 +3,16 @@ import React from "react";
 import { createRoot } from "react-dom/client"; 
 import { Router, Routes, Route} from 'react-router-dom';
 import { Card } from "./Card";
+import {Navbar} from "./Navbar";
 
 function App(){
     return(
         <>
-        <div className="card-box">
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-        </div>
+        <Navbar>
+            
+        </Navbar>
+        <section className="card-box"></section>
+
         </>
     )
 }

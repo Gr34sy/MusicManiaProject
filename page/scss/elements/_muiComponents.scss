@@ -1,0 +1,27 @@
+/* MUI Tabs styles */
+.MuiTabPanel-root.tabPanel{
+    padding: 10px;
+    color: white;
+    height: 200px;
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: rgb(51, 48, 48);
+}
+
+.MuiTabs-flexContainer{
+    justify-content: space-between;
+}
+
+.MuiTab-root.MuiButtonBase-root{
+    color: white;
+}
+
+.Mui-selected.MuiTab-root.MuiButtonBase-root{
+    color: red;
+}
+
+.MuiTabs-indicator.css-1aquho2-MuiTabs-indicator{
+    background-color: red;
+    height: 3px;
+}
