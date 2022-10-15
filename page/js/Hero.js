@@ -1,4 +1,5 @@
 import React from "react";
+import { Logotype } from "./Logotype";
 
 export function Hero(){
     return(
@@ -18,7 +19,9 @@ export function Hero(){
                 </div>
 
                 <div className="hero__right">
-                    <h1 className="page-title">About MusicMania</h1>
+                    <h1 className="page-title">
+                        <span className="about-span">About</span><Logotype additionalClass="logotype--inheritFS"/>
+                    </h1>
                     <p className="hero-paragraph">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus laudantium esse odit at, fugit perferendis numquam sed, doloremque accusamus minima mollitia aliquid! Sequi optio doloremque tenetur quasi dignissimos, voluptatibus porro.
                     </p>

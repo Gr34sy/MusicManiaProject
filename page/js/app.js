@@ -9,10 +9,8 @@ import { Hero } from "./Hero";
 function App(){
     return(
         <>
-        <Navbar>
+        <Navbar/>
             
-        </Navbar>
-
         <Hero/>
 
         <section className="card-box">
