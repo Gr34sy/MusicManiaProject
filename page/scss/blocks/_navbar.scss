@@ -3,14 +3,14 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    color: white;
+    color: $color-white;
     max-height: 70px;
-    background-color: black;
+    background-color: $color-black;
     text-align: center;
 }
 
 .logo{
-    background-color: rgb(61, 59, 59);
+    background-color: $color-grey-dark;
     font-size: 1.4rem;
     padding: 1.1em;
 }
@@ -22,19 +22,19 @@
     text-transform: uppercase;
 
     li{
-        border-left: 2px solid rgb(61, 59, 59);
+        border-left: 2px solid  $color-grey-dark;
     }
 
     a{
         display: block;
         padding: 1em;
-        color: white;
+        color: $color-white;
         text-decoration: none;
         transition: 500ms;
 
         &:hover{
-            color: red; 
-            background-color: white;
+            color: $color-red; 
+            background-color: $color-white;
             padding: 1.4em 1em;
         }
     }

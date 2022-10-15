@@ -5,7 +5,7 @@ export function Hero(){
         <main className="hero">
             <div className="hero-container">
                 <div className="hero__left">
-                    <figure className="figure--screen  hero__figure figure--vertical">
+                    <figure className="figure--screen  hero__figure hero__figure--vertical">
                         <img src="../images/PlayinDude1.jpg" alt="some concert" className="hero__img"/>
 
                         <figcaption className="hero__figcaption">
@@ -50,6 +50,17 @@ export function Hero(){
                     </figure>
                 </div> 
             </div>
+
+            <figure className="figure--screen hero__figure hero__figure--big">
+                <img src="../images/ConcertPic1.jpg" class="hero__img big-img"/>
+
+                <figcaption className="hero__figcaption big-figcaption">
+                    photo by Sebastian Ervi, source: 
+                    <a href="https://www.pexels.com" target="_blank">
+                        https://www.pexels.com
+                    </a>
+                </figcaption>
+            </figure>
         </main>
     )
 }

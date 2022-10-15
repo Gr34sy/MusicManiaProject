@@ -1,8 +1,9 @@
 .hero{
+    box-sizing: border-box;
     width: 100%;
-    height: 90vh;
-    background-color: $color-grey;
-    padding: 100px 0;
+    height: 210vh;
+    background-color: $color-grey-dark;
+    padding: 50px;
 }
 
 .hero-container{
@@ -12,37 +13,37 @@
     justify-content: center;
 
     width: 80%;
-    height: 100%;
+    height: 90vh;
 }
 
 @mixin hero-border-style{
-    border-style: solid;
-    border-color: $color-black;
     box-sizing: border-box;
 }
 
 .hero__left{
     @include hero-border-style();
-    border-width: 5px 0px 5px 5px;
     width: 5%;
     height: inherit;
-    border-top-left-radius: $border-radius;
-    border-bottom-left-radius: $border-radius;
+    // border-top-left-radius: $border-radius;
+    // border-bottom-left-radius: $border-radius;
     padding: 1.2rem;
     background-color: $color-red-opacity;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    @media(min-width: 1150px){
+    @media(min-width: 1350px){
         width: 40%;
     }
 }
 
 .hero__right{
     @include hero-border-style();
-    border-width: 5px 5px 5px 0px;
     width: 95%;
     height: inherit;
-    border-top-right-radius: $border-radius;
-    border-bottom-right-radius: $border-radius;
+    // border-top-right-radius: $border-radius;
+    // border-bottom-right-radius: $border-radius;
     padding: 2rem;
     background-color: $color-white;
 
@@ -52,8 +53,9 @@
     justify-content: flex-start;
     gap: 30px;
 
-    @media(min-width: 1150px){
+    @media(min-width: 1350px){
         width: 60%;
+        padding: 1.5rem;
     }
 }
 
@@ -75,9 +77,9 @@
     align-items: center;
 }
 
-.figure--vertical{
-    margin: 0 auto;
-    width: 100%;
+.hero__figure--vertical{
+    width: 90%;
+    margin-top: 0;
 }
 
 
@@ -103,6 +105,19 @@
     }
 }
 
+.hero__figure--big{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.big-img{
+    border-radius: 0;
+}
+
+.big-figcaption{
+    // border-radius: $border-radius;
+    background-color: $color-white-opacity;
+}
 
 
 
