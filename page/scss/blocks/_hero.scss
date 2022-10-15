@@ -1,28 +1,108 @@
 .hero{
     width: 100%;
     height: 90vh;
-    background-color: rgb(61, 59, 59);
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    background-color: $color-grey;
+    padding: 100px 0;
 }
 
-.hero__left,.hero__right{
-    margin-top: 50px;
-    width: 40%;
-    height: 70vh;
+.hero-container{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 80%;
+    height: 100%;
+}
+
+@mixin hero-border-style{
+    border-style: solid;
+    border-color: $color-black;
+    box-sizing: border-box;
 }
 
 .hero__left{
-    width: 600px;
+    @include hero-border-style();
+    border-width: 5px 0px 5px 5px;
+    width: 5%;
+    height: inherit;
     border-top-left-radius: $border-radius;
     border-bottom-left-radius: $border-radius;
-    background-color: rgb(255, 0, 0, 0.4);
+    padding: 1.2rem;
+    background-color: $color-red-opacity;
+
+    @media(min-width: 1150px){
+        width: 40%;
+    }
 }
 
 .hero__right{
-    background-color: white;
-    width: 50%;
+    @include hero-border-style();
+    border-width: 5px 5px 5px 0px;
+    width: 95%;
+    height: inherit;
     border-top-right-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
+    padding: 2rem;
+    background-color: $color-white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+
+    @media(min-width: 1150px){
+        width: 60%;
+    }
 }
+
+.page-title{
+    font-size: 3rem;
+    line-height: $line-height;
+    color: $color-red;
+}
+
+.hero-paragraph{
+    font-size: 1.4rem;
+    line-height: $line-height;
+}
+
+.hero__figure{
+    width: 70%;
+    margin-top: auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+.figure--vertical{
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+.hero__img{
+    width: 100%;
+    border-top-left-radius: $border-radius;
+}
+
+.hero__figcaption{
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    font-size: 0.8rem;
+    background-color: $color-grey-opacity;
+    padding: 5px;
+    color: $color-white;
+    border-bottom-left-radius: $border-radius;
+    
+    a{
+        color: $color-white;
+        text-decoration: none;
+        margin-left: 5px;
+    }
+}
+
+
+
+

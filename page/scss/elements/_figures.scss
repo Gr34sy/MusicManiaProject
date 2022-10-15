@@ -1,0 +1,14 @@
+.figure--tablet{
+    display: none;
+
+    @media(min-width: 650px) and (max-width:1149px){
+        display: flex;
+    }
+}
+
+.figure--screen{
+    display: none;
+    @media(min-width: 1150px){
+        display: flex;
+    }
+}

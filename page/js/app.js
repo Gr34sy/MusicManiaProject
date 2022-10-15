@@ -17,6 +17,7 @@ function App(){
 
         <section className="card-box">
             <Card/>
+            <Card/>
         </section>
 
         </>
