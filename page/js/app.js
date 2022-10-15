@@ -4,6 +4,7 @@ import { createRoot } from "react-dom/client";
 import { Router, Routes, Route} from 'react-router-dom';
 import { Card } from "./Card";
 import {Navbar} from "./Navbar";
+import { Hero } from "./Hero";
 
 function App(){
     return(
@@ -11,7 +12,12 @@ function App(){
         <Navbar>
             
         </Navbar>
-        <section className="card-box"></section>
+
+        <Hero/>
+
+        <section className="card-box">
+            <Card/>
+        </section>
 
         </>
     )

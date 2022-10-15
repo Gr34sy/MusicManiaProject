@@ -1,18 +1,40 @@
 .nav{
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
-    background-color: black;
     color: white;
+    max-height: 70px;
+    background-color: black;
+}
+
+.logo{
+    background-color: rgb(61, 59, 59);
+    font-size: 1.4rem;
+    padding: 1.1em;
 }
 
 .navlist{
     display: flex;
-    gap: 2em;
-    font-size: 2rem;
+    align-items: center;
+    font-size: 1.4rem;
     text-transform: uppercase;
 
     li{
-        padding: 0.5em;
+        border-left: 2px solid rgb(61, 59, 59);
+    }
+
+    a{
+        display: block;
+        padding: 1em;
+        color: white;
+        text-decoration: none;
+        transition: 500ms;
+
+        &:hover{
+            color: red; 
+            background-color: white;
+            padding: 1.4em 1em;
+        }
     }
 }
