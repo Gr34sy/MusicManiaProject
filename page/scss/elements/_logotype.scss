@@ -1,0 +1,18 @@
+.logotype-box{
+    padding: 0.8em 2em;
+    background-color: $color-grey-dark;
+}
+
+.logotype{
+    font-size: 1.6rem;
+    font-family: $font-marker;
+    display: inline-block;
+
+    span{
+        color: $color-red;
+    }
+}
+
+.logotype--inheritFS{
+    font-size: inherit;
+}

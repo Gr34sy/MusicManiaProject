@@ -1,18 +1,35 @@
 .nav{
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
-    background-color: black;
-    color: white;
+    color: $color-white;
+    max-height: 70px;
+    background-color: $color-black;
+    text-align: center;
 }
 
 .navlist{
     display: flex;
-    gap: 2em;
-    font-size: 2rem;
-    text-transform: uppercase;
+    align-items: center;
+    font-size: 1.8rem;
+    font-family: $font-bebas;
 
     li{
-        padding: 0.5em;
+        border-left: 2px solid  $color-grey-dark;
+    }
+
+    a{
+        display: block;
+        padding: 1em;
+        color: $color-white;
+        text-decoration: none;
+        transition: 500ms;
+
+        &:hover{
+            color: $color-red; 
+            background-color: $color-white;
+            padding: 1.4em 1em;
+        }
     }
 }

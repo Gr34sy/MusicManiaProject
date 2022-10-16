@@ -1,17 +1,18 @@
 import React from "react";
+import {Logotype} from "./Logotype";
 
 export function Navbar(){
     return(
         <nav className="nav">
-            <div className="logo">
-                MusicMania
+            <div className="logotype-box">
+                <Logotype/> 
             </div>
-
+            
             <ul className="navlist">
-                <li>Main page</li>
-                <li>Your Favorites</li>
-                <li>Artists of the Month</li>
-                <li>Songs of the Month</li>
+                <li><a href="#">Main page</a></li>
+                <li><a href="#">Your Favorites</a></li>
+                <li><a href="#">Artists of the Month</a></li>
+                <li><a href="#">Songs of the Month</a></li>
             </ul>
         </nav>
     )

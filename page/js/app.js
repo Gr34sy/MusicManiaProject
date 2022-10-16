@@ -4,14 +4,22 @@ import { createRoot } from "react-dom/client";
 import { Router, Routes, Route} from 'react-router-dom';
 import { Card } from "./Card";
 import {Navbar} from "./Navbar";
+import { Hero } from "./Hero";
+import { ArtistBrowser } from "./ArtistBrowser";
 
 function App(){
     return(
         <>
-        <Navbar>
+        <Navbar/>
             
-        </Navbar>
-        <section className="card-box"></section>
+        <Hero/>
+
+        <ArtistBrowser/>
+
+        <section className="card-box">
+            <Card/>
+            <Card/>
+        </section>
 
         </>
     )

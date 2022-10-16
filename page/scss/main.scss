@@ -5,11 +5,15 @@
 @import './misc/general';
 
 //Blocks
-@import './blocks/artistCard';
 @import './blocks/navbar';
+@import './blocks/hero';
+@import './blocks/artistCard';
+@import './blocks/artistBrowser';
 
 //Elements
 @import './elements/muiComponents';
+@import './elements/figures';
+@import './elements/logotype';
 
 
 

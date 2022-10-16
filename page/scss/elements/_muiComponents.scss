@@ -1,12 +1,12 @@
 /* MUI Tabs styles */
 .MuiTabPanel-root.tabPanel{
     padding: 10px;
-    color: white;
+    color: $color-white;
     height: 200px;
     border-radius: 15px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    background-color: rgb(51, 48, 48);
+    background-color: $color-grey-light;
 }
 
 .MuiTabs-flexContainer{
@@ -14,14 +14,16 @@
 }
 
 .MuiTab-root.MuiButtonBase-root{
-    color: white;
+    color: $color-white;
+    font-family: $font-bebas;
+    font-size: 1.2rem;
 }
 
 .Mui-selected.MuiTab-root.MuiButtonBase-root{
-    color: red;
+    color: $color-red;
 }
 
 .MuiTabs-indicator.css-1aquho2-MuiTabs-indicator{
-    background-color: red;
+    background-color: $color-red;
     height: 3px;
 }

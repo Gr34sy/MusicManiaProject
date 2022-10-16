@@ -1,0 +1,132 @@
+.hero{
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 90vh;
+    background-color: $color-grey-dark;
+    padding: 50px;
+}
+
+.hero-container{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 80%;
+    height: 100vh;
+}
+
+
+
+.hero__left{
+    box-sizing: border-box;
+    width: 5%;
+    height: inherit;
+    // border-top-left-radius: $border-radius;
+    // border-bottom-left-radius: $border-radius;
+    padding: 1.2rem;
+    background-color: $color-red-opacity;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media(min-width: 1350px){
+        width: 40%;
+    }
+}
+
+.hero__right{
+    box-sizing: border-box;
+    width: 95%;
+    height: inherit;
+    // border-top-right-radius: $border-radius;
+    // border-bottom-right-radius: $border-radius;
+    padding: 2rem;
+    background-color: $color-white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+
+    @media(min-width: 1350px){
+        width: 60%;
+        padding: 1.5rem;
+    }
+}
+
+.page-title{
+    font-size: 3rem;
+    line-height: $line-height;
+    color: $color-grey-light;
+    font-family: $font-marker;
+
+    .about-span{
+        color: $color-red;
+        margin-right: 1em;
+    }
+}
+
+.hero-paragraph{
+    font-size: 1.4rem;
+    line-height: $line-height;
+    font-family: $font-lato;
+}
+
+.hero__figure{
+    box-sizing: border-box;
+    width: 70%;
+    margin-top: auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero__figure--vertical{
+    width: 90%;
+    margin-top: 0;
+}
+
+
+.hero__img{
+    width: 100%;
+    border-top-left-radius: $border-radius;
+}
+
+.hero__figcaption{
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    line-height: $line-height;
+    font-family: $font-lato;
+    font-weight: 300;
+    font-size: 0.8rem;
+    background-color: $color-grey-opacity;
+    padding: 5px;
+    color: $color-white;
+    border-bottom-left-radius: $border-radius;
+    
+    a{
+        color: $color-white;
+        text-decoration: none;
+        margin-left: 5px;
+    }
+}
+
+.hero__figure--big{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.big-img{
+    border-radius: 0;
+}
+
+.big-figcaption{
+    // border-radius: $border-radius;
+    background-color: $color-white-opacity;
+}
+
+
+
