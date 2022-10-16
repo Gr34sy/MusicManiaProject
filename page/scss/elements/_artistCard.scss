@@ -1,15 +1,9 @@
-.card-box{
-    display: flex;
-    justify-content: center;
-    gap: 200px;
-    flex-wrap: wrap;
-}
 
 .card{
     box-sizing: border-box;
     position: relative;
-    width: 550px;
-    min-height: 800px;
+    width: 350px;
+    min-height: 640px;
     padding: 0.625rem;
     display: flex;
     gap: 10px;
@@ -17,6 +11,11 @@
     justify-content: flex-start;
     align-items: center;
     background-color: $color-black;
+
+    @media(min-width: 600px){
+        width: 550px;
+    }
+
 }
 
 .card__img{
@@ -28,24 +27,33 @@
     color: $color-red;
     font-family: $font-lato;
     font-weight: 900;
-    font-size: 2.2rem;
+    font-size: calc($h-mobile-size/1.2);
     text-align: center;
     line-height: $line-height;
+
+    @media(min-width: 600px){
+        font-size: 2.2rem;
+    }
 }
 
 .card__members, .card__discography, .card__concerts{
+    font-size: $p-mobile-size;
+    font-weight: 300;
+    line-height: 1.6em;
+    font-family: $font-lato;
     height: 100%;
     color: $color-white;
     list-style-position: inside;
-    font-size: 0.9rem;
-    font-family: $font-lato;
-    font-weight: 300;
-    line-height: 1.6em;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    overflow-y: scroll;;
+
+    li{
+        padding: 2px;
+    }
+
+    @media(min-width: 600px){
+        font-size: 1.2rem;
+    }
 }
 
 .card__members{
@@ -78,7 +86,7 @@
 .genre-box{
     font-family: $font-lato;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: $line-height;
     padding: 5px;
     color: $color-white;
@@ -95,32 +103,52 @@
     width: 98%;
     height: 50px;
     font-family: $font-bebas;
-    font-size: 2rem;
+    font-size: $h-mobile-size;
     line-height: $line-height;
+
+    @media(min-width: 600px){
+        font-size: 2rem;
+    }
 }
 
 
 .hardometer__spans{
     display: flex;
-    gap: 10px;
+    align-items: center;
+    gap: 5px;
+
+    @media(min-width: 600px){
+        gap: 10px;
+    }
 }
 
 .hardometer__number{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
     background-color: $color-grey-light;
     color: $color-red;
-    width: 50px;
-    height: 50px; 
+    width: 25px;
+    height: 25px; 
     border-radius: $border-radius;
+
+    @media(min-width: 600px){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px; 
+    }
 }
 
 .hardometer__span{
    width: 5px;
-   height: 50px;
+   height: 25px; 
    border: none;
    background-color: $color-grey-light;
+
+   @media(min-width: 600px){
+    height: 50px;
+  }
 }
 
 .card__social-media{
@@ -132,5 +160,9 @@
 .sm-icon{
     display: block;
     color: $color-grey-light;
-    font-size: 2rem;
+    font-size: 1.6rem;
+
+    @media(min-width: 600px){
+        font-size: 2rem;
+    }
 }

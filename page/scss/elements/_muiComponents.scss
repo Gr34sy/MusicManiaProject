@@ -2,11 +2,15 @@
 .MuiTabPanel-root.tabPanel{
     padding: 10px;
     color: $color-white;
-    height: 200px;
+    height: 150px;
     border-radius: 15px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     background-color: $color-grey-light;
+
+    @media(min-width: 600px){
+        height: 200px;
+    }
 }
 
 .MuiTabs-flexContainer{
@@ -16,7 +20,11 @@
 .MuiTab-root.MuiButtonBase-root{
     color: $color-white;
     font-family: $font-bebas;
-    font-size: 1.2rem;
+    font-size: $p-mobile-size;
+
+    @media(min-width: 600px){
+        font-size: 1.2rem;
+    }
 }
 
 .Mui-selected.MuiTab-root.MuiButtonBase-root{
