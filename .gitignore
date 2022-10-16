@@ -26,4 +26,4 @@ node_modules/
 .test/
 .solution
 
-page/build
+/page/build

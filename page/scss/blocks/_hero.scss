@@ -3,7 +3,7 @@
     width: 100%;
     min-height: 90vh;
     background-color: $color-grey-dark;
-    padding: 50px;
+    padding: $section-padding;
 }
 
 .hero-container{
@@ -58,7 +58,7 @@
 }
 
 .page-title{
-    font-size: 3rem;
+    font-size: $h-mobile-size;
     line-height: $line-height;
     color: $color-grey-light;
     font-family: $font-marker;
@@ -67,12 +67,20 @@
         color: $color-red;
         margin-right: 1em;
     }
+
+    @media(min-width: 850px){
+        font-size: $h-size;
+    }
 }
 
 .hero-paragraph{
-    font-size: 1.4rem;
+    font-size: $p-mobile-size;
     line-height: $line-height;
     font-family: $font-lato;
+
+    @media(min-width: 850px){
+        font-size: $p-size;
+    }
 }
 
 .hero__figure{

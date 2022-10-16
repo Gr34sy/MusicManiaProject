@@ -7,10 +7,11 @@
 //Blocks
 @import './blocks/navbar';
 @import './blocks/hero';
-@import './blocks/artistCard';
 @import './blocks/artistBrowser';
+@import './blocks/artistComparison';
 
 //Elements
+@import './elements/artistCard';
 @import './elements/muiComponents';
 @import './elements/figures';
 @import './elements/logotype';
