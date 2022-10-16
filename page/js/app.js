@@ -5,6 +5,7 @@ import { Router, Routes, Route} from 'react-router-dom';
 import { Card } from "./Card";
 import {Navbar} from "./Navbar";
 import { Hero } from "./Hero";
+import { ArtistBrowser } from "./ArtistBrowser";
 
 function App(){
     return(
@@ -12,6 +13,8 @@ function App(){
         <Navbar/>
             
         <Hero/>
+
+        <ArtistBrowser/>
 
         <section className="card-box">
             <Card/>

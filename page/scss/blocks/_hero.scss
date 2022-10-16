@@ -13,15 +13,13 @@
     justify-content: center;
 
     width: 80%;
-    height: 90vh;
+    height: 100vh;
 }
 
-@mixin hero-border-style{
-    box-sizing: border-box;
-}
+
 
 .hero__left{
-    @include hero-border-style();
+    box-sizing: border-box;
     width: 5%;
     height: inherit;
     // border-top-left-radius: $border-radius;
@@ -39,7 +37,7 @@
 }
 
 .hero__right{
-    @include hero-border-style();
+    box-sizing: border-box;
     width: 95%;
     height: inherit;
     // border-top-right-radius: $border-radius;
@@ -78,6 +76,7 @@
 }
 
 .hero__figure{
+    box-sizing: border-box;
     width: 70%;
     margin-top: auto;
     flex-direction: column;
