@@ -7,7 +7,7 @@ export function Card(){
             <figure>
                 <img src="../images/Hu wallpaper 2.jpg" alt="HU" className="card__img"/>
                 <figcaption>
-                    <h2 className="card__title">Hollywood Undead</h2>
+                    <h3 className="card__title">Hollywood Undead</h3>
                 </figcaption>
             </figure>
 

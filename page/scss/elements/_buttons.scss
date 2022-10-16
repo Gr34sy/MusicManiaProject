@@ -1,0 +1,20 @@
+.main-page__button{
+    box-sizing: border-box;
+    background-color: $color-grey-light;
+    border: 2px solid $color-white;
+    color: $color-white;
+    font-family: $font-bebas;
+    font-size: calc($button-size/1.5);
+    padding: 5px 10px;
+
+    &:hover{
+        color: $color-red;
+        background-color: $color-white-transparent;
+        cursor: pointer;
+    }
+
+    @media(min-width:650px){
+        padding: 5px 20px;
+        font-size: $button-size;
+    }
+}

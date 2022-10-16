@@ -1,5 +1,6 @@
 /* MUI Tabs styles */
 .MuiTabPanel-root.tabPanel{
+    box-sizing: border-box;
     padding: 10px;
     color: $color-white;
     height: 150px;
@@ -8,8 +9,8 @@
     border-top-right-radius: 0;
     background-color: $color-grey-light;
 
-    @media(min-width: 600px){
-        height: 200px;
+    @media(min-width:650px){
+        height: 250px;
     }
 }
 
@@ -22,7 +23,7 @@
     font-family: $font-bebas;
     font-size: $p-mobile-size;
 
-    @media(min-width: 600px){
+    @media(min-width:650px){
         font-size: 1.2rem;
     }
 }
