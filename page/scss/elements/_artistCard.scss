@@ -36,6 +36,8 @@
 }
 
 .card__members, .card__discography, .card__concerts{
+    white-space: nowrap;
+    
     font-size: $p-mobile-size;
     font-weight: 300;
     line-height: 1.6em;
@@ -44,6 +46,7 @@
     color: $color-white;
     list-style-position: inside;
     width: 100%;
+    overflow-x: auto;
     overflow-y: auto;
 
     li{

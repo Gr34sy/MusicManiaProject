@@ -11,7 +11,7 @@ export function ArtistBrowser(){
                 <p className="list-bar">Filtr</p>
                 <div class="browser-list-box">
                     <ul className="browser-list">
-                        <li>Saliva</li>
+                        <li>Saliva Slipknot SlipknotSlipknotSlipknotSlipknotSlipknotSlipknot</li>
                         <li>Saliva</li>
                         <li>Saliva</li>
                         <li>Saliva</li>

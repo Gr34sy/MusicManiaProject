@@ -1,6 +1,13 @@
 .logotype-box{
-    padding: 0.8em 2em;
+    width: 60%;
+    padding: 0;
     background-color: $color-grey-dark;
+
+    @media(min-width: 1150px){
+        padding: 0;
+        width: auto;
+        padding: 0.8em 2em;
+    }
 }
 
 .logotype{
@@ -15,4 +22,11 @@
 
 .logotype--inheritFS{
     font-size: inherit;
+}
+
+.logotype--nav{
+    font-size: $h-mobile-size;
+    @media(min-width: 1150px){
+       font-size: 1.6rem;
+    }
 }
