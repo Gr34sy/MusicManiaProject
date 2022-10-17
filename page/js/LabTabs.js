@@ -22,7 +22,7 @@ export default function LabTabs() {
             <Tab label="Concerts" value="3"/>
           </TabList>
         </Box>
-        <TabPanel value="1" className="tabPanel">
+        <TabPanel value="1" className="tabPanel custom-scrollbar">
           <ul className="card__members">
             <li>Dylan „Funny Man” Alvarez</li>
             <li>Jorel „J-Dog” Decker</li>
@@ -32,7 +32,7 @@ export default function LabTabs() {
           </ul>
         </TabPanel>
 
-        <TabPanel value="2" className="tabPanel">
+        <TabPanel value="2" className="tabPanel custom-scrollbar">
           <ul className="card__discography">
             <li>Swan Songs (2008)</li>
             <li>American Tragedy (2011)</li>
@@ -45,7 +45,7 @@ export default function LabTabs() {
           </ul>
         </TabPanel>
 
-        <TabPanel value="3" className="tabPanel">
+        <TabPanel value="3" className="tabPanel custom-scrollbar kupa chuj dupa cyce wadowice">
           <ul className="card__concerts">
             <li><i class="fa-solid fa-music"></i>El Paso</li>
             <li><i class="fa-solid fa-music"></i>Berlin</li>

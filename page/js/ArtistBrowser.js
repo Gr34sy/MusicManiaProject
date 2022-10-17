@@ -9,24 +9,24 @@ export function ArtistBrowser(){
                 </h2>
 
                 <p className="list-bar">Filtr</p>
-                <ul className="browser-list">
-                    <li>Saliva</li>
-                    <li>Saliva</li>
-                    <li>Saliva</li>
-                    <li>Saliva</li>
-                    <li>Saliva</li>
-                    <li>Saliva</li>
-                    <li>Saliva</li>
-                    <li>Saliva</li>
-                    <li>Saliva</li>
-                    <li>Saliva</li>
-                    <li>Saliva</li>
-                    <li>Saliva</li>
-                    <li>Saliva</li>
-                    <li>Saliva</li>
-                    <li>Saliva</li>
-                    <li>Saliva</li>
-                </ul>
+                <div class="browser-list-box">
+                    <ul className="browser-list">
+                        <li>Saliva</li>
+                        <li>Saliva</li>
+                        <li>Saliva</li>
+                        <li>Saliva</li>
+                        <li>Saliva</li>
+                        <li>Saliva</li>
+                        <li>Saliva</li>
+                        <li>Saliva</li>
+                        <li>Saliva</li>
+                        <li>Saliva</li>
+                        <li>Saliva</li>
+                        <li>Saliva</li>
+                        <li>Saliva</li>
+                    </ul>
+                </div>
+
 
                 <div class="details-box">
                     <p>Click for details</p>
