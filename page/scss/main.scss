@@ -3,6 +3,7 @@
 @import './misc/typography';
 @import './misc/variables';
 @import './misc/general';
+@import './misc/figureDisplaying';
 
 //Blocks
 @import './blocks/navbar';
@@ -13,7 +14,6 @@
 //Elements
 @import './elements/artistCard';
 @import './elements/muiComponents';
-@import './elements/figures';
 @import './elements/logotype';
 @import './elements/buttons';
 @import './elements/scrollbar';

@@ -9,7 +9,7 @@ export function Hero(){
                     <figure className="figure--screen  hero__figure hero__figure--vertical">
                         <img src="../images/PlayinDude1.jpg" alt="some concert" className="hero__img"/>
 
-                        <figcaption className="hero__figcaption">
+                        <figcaption className="figure--screen hero__figcaption">
                             photo by Vinicius Caricatte, source: 
                             <a href="https://www.pexels.com" target="_blank">
                                 https://www.pexels.com
@@ -30,18 +30,7 @@ export function Hero(){
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eius iste iure ea veritatis, commodi eum sequi impedit atque laudantium fuga. Similique ipsa facere tenetur autem nisi perspiciatis nulla quibusdam, sit doloribus, at cumque nihil velit dolor iure quod voluptatibus quaerat impedit. Officiis recusandae praesentium, alias cupiditate quam dolores rerum?
                     </p>
 
-                    <figure className="figure--tablet hero__figure">
-                        <img src="../images/ConcertPic1.jpg" alt="some concert" className="hero__img"/>
-
-                        <figcaption className="hero__figcaption">
-                            photo by Sebastian Ervi, source: 
-                            <a href="https://www.pexels.com" target="_blank">
-                                https://www.pexels.com
-                            </a>
-                        </figcaption>
-                    </figure>
-
-                    <figure className="figure--screen  hero__figure ">
+                    <figure className="hero__figure figure--all">
                         <img src="../images/GuitarPic1.jpg" alt="some concert" className="hero__img"/>
 
                         <figcaption className="hero__figcaption">
@@ -54,7 +43,7 @@ export function Hero(){
                 </div> 
             </div>
 
-            <figure className="figure--screen hero__figure hero__figure--big">
+            <figure className="hero__figure hero__figure--big figure--all">
                 <img src="../images/ConcertPic1.jpg" class="hero__img big-img"/>
 
                 <figcaption className="hero__figcaption big-figcaption">
