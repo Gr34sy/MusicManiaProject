@@ -10,6 +10,7 @@ import { ArtistComparison } from "./ArtistComparison";
 function App(){
     return(
         <>
+
         <Navbar/>
             
         <Hero/>

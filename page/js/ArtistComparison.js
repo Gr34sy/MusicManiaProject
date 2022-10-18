@@ -4,14 +4,14 @@ import { Card } from "./Card";
 export function ArtistComparison(){
     return(
         <section className="artist-comparison">
-            <div class="comparison-box">
+            <div className="comparison-box">
                 <h2 className="comparison__title">
                     Search artists similar to your <span>favorite!</span>
                 </h2>
 
-                <form class="comparison__form">
+                <form className="comparison__form">
                     <input type="text" className="comparison__input"/>
-                    <button class="main-page__button">Search</button>
+                    <button className="main-page__button">Search</button>
                 </form>
                 <div className="card-box">
                     <Card/>

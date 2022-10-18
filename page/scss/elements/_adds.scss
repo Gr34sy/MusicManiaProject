@@ -1,0 +1,39 @@
+.add{
+    display: none;
+    top: 1000px;
+    position: absolute;
+    background-color: $color-grey-light;
+    width: 10%;
+    height: 400px;
+    padding: 10px;
+
+    font-family: $font-marker;
+    font-size: calc($h-size*0.8);
+    color: $color-white;
+    text-align: center;
+
+    h3{
+        margin-top: auto;
+    }
+
+    span{
+        color: $color-red;
+    }
+
+    @media(min-width:1150px){
+        display: block;
+    }
+
+}
+
+.add--left{
+    left: 0;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+}
+
+.add--right{
+    right: 0;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+}

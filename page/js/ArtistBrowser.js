@@ -2,14 +2,14 @@ import React from "react";
 
 export function ArtistBrowser(){
     return(
-        <section class="artist-browser">
-            <div class="browser-box">
+        <section className="artist-browser">
+            <div className="browser-box">
                 <h2 className="browser__title">
                     Browse all <span>music artists</span> around the globe!
                 </h2>
 
                 <p className="list-bar">Filtr</p>
-                <div class="browser-list-box">
+                <div className="browser-list-box">
                     <ul className="browser-list">
                         <li>Saliva Slipknot SlipknotSlipknotSlipknotSlipknotSlipknotSlipknot</li>
                         <li>Saliva</li>
@@ -28,7 +28,7 @@ export function ArtistBrowser(){
                 </div>
 
 
-                <div class="details-box">
+                <div className="details-box">
                     <p>Click for details</p>
                 </div>
                 

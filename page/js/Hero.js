@@ -1,5 +1,6 @@
 import React from "react";
 import { Logotype } from "./Logotype";
+import { Add } from "./Add";
 
 export function Hero(){
     return(
@@ -44,7 +45,7 @@ export function Hero(){
             </div>
 
             <figure className="hero__figure hero__figure--big figure--all">
-                <img src="../images/ConcertPic1.jpg" class="hero__img big-img"/>
+                <img src="../images/ConcertPic1.jpg" className="hero__img big-img"/>
 
                 <figcaption className="hero__figcaption big-figcaption">
                     photo by Sebastian Ervi, source: 
@@ -53,6 +54,9 @@ export function Hero(){
                     </a>
                 </figcaption>
             </figure>
+
+            <Add additionalClass="add--left"/>
+            <Add additionalClass="add--right"/>
         </main>
     )
 }
