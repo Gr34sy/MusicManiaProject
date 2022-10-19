@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
 
 export function ArtistBrowser(){
-    const [filterValue, setFilterValue] = useState('metal')
+    const [filterValue, setFilterValue] = useState('metal');
     const [browserFilter,setBrowserFilter] = useState([]);
+    const [browserDetails, setBrowserDetails] = useState([]);
     
-    const rootAPI = 'http://ws.audioscrobbler.com/2.0'
-    const keyAPI = '4d2a662e3ae0be5759a731d889e084d1'
+    const rootAPI = 'http://ws.audioscrobbler.com/2.0';
+    const keyAPI = '4d2a662e3ae0be5759a731d889e084d1';
     
 
     useEffect(() => {
-        fetch(`http://ws.audioscrobbler.com/2.0/?method=tag.gettopartists&tag=${filterValue}&api_key=4d2a662e3ae0be5759a731d889e084d1&format=json`)
+        fetch(`${rootAPI}/?method=tag.gettopartists&tag=${filterValue}&api_key=${keyAPI}&format=json`)
         .then(response => {
             if(response.ok){
                 return response
@@ -22,6 +23,7 @@ export function ArtistBrowser(){
     }, [filterValue]);
 
     function handleFilterChange(e){
+        e.preventDefault();
         setFilterValue(e.target.value);
     }
 
@@ -56,7 +58,7 @@ export function ArtistBrowser(){
 
 
                 <div className="details-box">
-                    <p>Click for details</p>
+                    <p>Click artist to see details</p>
                 </div>
                 
             </div>
