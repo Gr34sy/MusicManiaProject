@@ -5,7 +5,7 @@ const entryPath = "page";
 
 module.exports = {
   mode: "none",
-  entry: `./${entryPath}/js/app.js`,
+  entry: ["whatwg-fetch", `./${entryPath}/js/app.js`],
   devtool: "inline-source-map",
   output: {
     filename: "out.js",

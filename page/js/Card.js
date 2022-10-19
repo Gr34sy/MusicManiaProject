@@ -57,11 +57,11 @@ export function Card(){
                 </div>
             </div>
 
-            <div className="card__social-media">
+            {/* <div className="card__social-media">
                 <a href="" className="sm-icon"><i className="fa-brands fa-square-facebook"></i></a>
                 <a href="" className="sm-icon"><i className="fa-brands fa-square-instagram"></i></a>
                 <a href="" className="sm-icon"><i className="fa-brands fa-youtube"></i></a>
-            </div>
+            </div> */}
         </div>
     )
 }

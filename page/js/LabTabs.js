@@ -47,10 +47,10 @@ export default function LabTabs() {
 
         <TabPanel value="3" className="tabPanel custom-scrollbar kupa chuj dupa cyce wadowice">
           <ul className="card__concerts">
-            <li><i class="fa-solid fa-music"></i>El Paso</li>
-            <li><i class="fa-solid fa-music"></i>Berlin</li>
-            <li><i class="fa-solid fa-music"></i>Warsaw</li>
-            <li><i class="fa-solid fa-music"></i>Los Angeles</li>
+            <li><i className="fa-solid fa-music"></i>El Paso</li>
+            <li><i className="fa-solid fa-music"></i>Berlin</li>
+            <li><i className="fa-solid fa-music"></i>Warsaw</li>
+            <li><i className="fa-solid fa-music"></i>Los Angeles</li>
           </ul>
         </TabPanel>
 
