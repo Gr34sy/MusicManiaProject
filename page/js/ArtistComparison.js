@@ -48,8 +48,9 @@ export function ArtistComparison(){
                     <button className="main-page__button" onClick={handleSearch}>Search</button>
                 </form>
                 <div className="card-box">
+                    {comparisonFilter && <Card artist={comparisonFilter}/>}
                     {comparisonData
-                    .filter((artist,id)=>id<6)
+                    .filter((artist,id)=>id<7)
                     .map((artist, id)=> <Card artist={artist.name} key={id}/>)
                     }
                 </div>

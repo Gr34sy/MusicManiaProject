@@ -58,12 +58,8 @@
     }
 }
 
-.card__members{
+.card__members,.card__discography{
     list-style-type: circle;
-}
-
-.card__discography{
-    list-style-type: upper-roman;
 }
 
 .card__concerts{
@@ -77,6 +73,7 @@
 }
 
 .card__genres{
+    text-transform: capitalize;
     width: 98%;
     min-height: 30px;
     display: flex;

@@ -5,7 +5,7 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 
-export default function LabTabs() {
+export default function LabTabs({albums}) {
   const [value, setValue] = React.useState('1');
 
   const handleChange = (event, newValue) => {
@@ -34,23 +34,18 @@ export default function LabTabs() {
 
         <TabPanel value="2" className="tabPanel custom-scrollbar">
           <ul className="card__discography">
-            <li>Swan Songs (2008)</li>
-            <li>American Tragedy (2011)</li>
-            <li>Notes from the Underground (2013)</li>
-            <li>Day of the Dead (2015)</li>
-            <li>Five (2017)</li>
-            <li>New Empire, Vol. 1 (2020)</li>
-            <li>New Empire, Vol. 2 (2020)</li>
-            <li>Hotel Kalifornia (2022)</li>
+            {albums
+            .filter((album,id)=>id<16)
+            .map(
+              (album,id)=>
+              (<li key={id}>{album.name}</li>)
+            )}
           </ul>
         </TabPanel>
 
         <TabPanel value="3" className="tabPanel custom-scrollbar kupa chuj dupa cyce wadowice">
           <ul className="card__toptracks">
             <li><i className="fa-solid fa-music"></i>El Paso</li>
-            <li><i className="fa-solid fa-music"></i>Berlin</li>
-            <li><i className="fa-solid fa-music"></i>Warsaw</li>
-            <li><i className="fa-solid fa-music"></i>Los Angeles</li>
           </ul>
         </TabPanel>
 

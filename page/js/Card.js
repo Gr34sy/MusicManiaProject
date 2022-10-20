@@ -8,6 +8,7 @@ export function Card({artist}){
 
     const[artistData, setArtistData] = useState();
     const[artistAlbums, setArtistAlbums] = useState();
+    const[artistTags, setArtistTags] = useState();
 
     useEffect(()=>{
 
@@ -21,12 +22,33 @@ export function Card({artist}){
         .then(response => response.json())
         .then ( data => setArtistData(data.artist))
         .catch(err => console.error(err));
+
+        fetch(`${rootAPI}/?method=artist.gettopalbums&artist=${artist}&api_key=${keyAPI}&format=json`)
+        .then(response => {
+            if(response.ok){
+                return response
+            }
+            throw Error(response.status);
+        })
+        .then(response => response.json())
+        .then ( data => setArtistAlbums(data.topalbums.album))
+        .catch(err => console.error(err));
+
+        fetch(`${rootAPI}/?method=artist.gettoptags&artist=${artist}&api_key=${keyAPI}&format=json`)
+        .then(response => {
+            if(response.ok){
+                return response
+            }
+            throw Error(response.status);
+        })
+        .then(response => response.json())
+        .then ( data => setArtistTags(data.toptags.tag))
+        .catch(err => console.error(err));
+        
     },[])
 
-    console.log(artistData)
-
     return(
-        (artistData &&
+        (artistData && artistAlbums && artistTags &&
         <div className="card">
             <figure>
                 <img src="../images/Hu wallpaper 2.jpg" alt="HU" className="card__img"/>
@@ -35,32 +57,18 @@ export function Card({artist}){
                 </figcaption>
             </figure>
 
-            <LabTabs/>
+            <LabTabs albums={artistAlbums}/>
 
             <div className="card__genres">
-                <div className="genre-box">
-                    Trap Metal
-                </div>
 
-                <div className="genre-box">
-                    Rap Metal
-                </div>
-
-                <div className="genre-box">
-                    Rapcore
-                </div>
-
-                <div className="genre-box">
-                    Nu Metal
-                </div>
-
-                <div className="genre-box">
-                    Metal
-                </div>
-
-                <div className="genre-box">
-                    Alternative Metal
-                </div>
+                {artistTags
+                .filter((tag,id)=>id<9)
+                .map((tag,id) =>(
+                    <div key={id} className="genre-box">
+                        {tag.name}
+                    </div>
+                ))
+                }
             </div>
 
             <div className="hardometer">
