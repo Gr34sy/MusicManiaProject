@@ -118,7 +118,7 @@ export function ArtistBrowser(){
                             </p>
 
                             <p className="artistinfo__listeners">
-                                <span>Listeners:</span>{artistDetails.stats.playcount}
+                                <span>Listeners:</span>{artistDetails.stats.listeners}
                             </p>
 
                             <p className="artistinfo__tags">
