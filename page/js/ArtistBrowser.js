@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 export function ArtistBrowser(){
+    const rootAPI = 'http://ws.audioscrobbler.com/2.0';
+    const keyAPI = '4d2a662e3ae0be5759a731d889e084d1';
+
+
     const [browserFilterValue, setBrowserFilterValue] = useState('metal');
     const [browserFilter,setBrowserFilter] = useState([]);
 
@@ -10,8 +14,6 @@ export function ArtistBrowser(){
     const [artistDetails, setArtistDetails] = useState({name: "Click on artist to get details!",stats: {playcount: 0, listeners: 0}, tags:{tag:[]}});
     const [artistTopTracks, setArtistTopTracks] = useState([]);
     
-    const rootAPI = 'http://ws.audioscrobbler.com/2.0';
-    const keyAPI = '4d2a662e3ae0be5759a731d889e084d1';
     
 
     useEffect(() => {
@@ -118,18 +120,18 @@ export function ArtistBrowser(){
                             </p>
 
                             <p className="artistinfo__listeners">
-                                <span>Listeners:</span>{artistDetails.stats.playcount}
+                                <span>Listeners:</span>{artistDetails.stats.listeners}
                             </p>
 
-                            <p className="artistinfo__tags">
+                            <div className="artistinfo__tags">
                                 <span>Tags:</span><br/>
                                 {artistDetails.tags.tag.map(
-                                    (tag)=>
-                                    (<div className="genre-box--browser">
+                                    (tag,id)=>
+                                    (<div key={id} className="genre-box--browser">
                                         {tag.name}
                                     </div>)
                                 )}
-                            </p>
+                            </div>
                         </div>
                 
                         <ul className="artistinfo__toptracks">

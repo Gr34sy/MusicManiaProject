@@ -19,7 +19,7 @@ export default function LabTabs() {
           <TabList onChange={handleChange} aria-label="lab API tabs example">
             <Tab label="Band Members" value="1"/>
             <Tab label="Discography" value="2"/>
-            <Tab label="Concerts" value="3"/>
+            <Tab label="Top Tracks" value="3"/>
           </TabList>
         </Box>
         <TabPanel value="1" className="tabPanel custom-scrollbar">
@@ -46,7 +46,7 @@ export default function LabTabs() {
         </TabPanel>
 
         <TabPanel value="3" className="tabPanel custom-scrollbar kupa chuj dupa cyce wadowice">
-          <ul className="card__concerts">
+          <ul className="card__toptracks">
             <li><i className="fa-solid fa-music"></i>El Paso</li>
             <li><i className="fa-solid fa-music"></i>Berlin</li>
             <li><i className="fa-solid fa-music"></i>Warsaw</li>

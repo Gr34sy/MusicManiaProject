@@ -1,13 +1,37 @@
 import React from "react";
 import LabTabs from "./LabTabs";
+import {useState, useEffect} from "react";
 
-export function Card(){
+export function Card({artist}){
+    const rootAPI = 'http://ws.audioscrobbler.com/2.0';
+    const keyAPI = '4d2a662e3ae0be5759a731d889e084d1';
+
+    const[artistData, setArtistData] = useState();
+    const[artistAlbums, setArtistAlbums] = useState();
+
+    useEffect(()=>{
+
+        fetch(`${rootAPI}/?method=artist.getinfo&artist=${artist}&api_key=${keyAPI}&format=json`)
+        .then(response => {
+            if(response.ok){
+                return response
+            }
+            throw Error(response.status);
+        })
+        .then(response => response.json())
+        .then ( data => setArtistData(data.artist))
+        .catch(err => console.error(err));
+    },[])
+
+    console.log(artistData)
+
     return(
+        (artistData &&
         <div className="card">
             <figure>
                 <img src="../images/Hu wallpaper 2.jpg" alt="HU" className="card__img"/>
                 <figcaption>
-                    <h3 className="card__title">Hollywood Undead</h3>
+                    <h3 className="card__title">{artistData.name}</h3>
                 </figcaption>
             </figure>
 
@@ -63,5 +87,6 @@ export function Card(){
                 <a href="" className="sm-icon"><i className="fa-brands fa-youtube"></i></a>
             </div> */}
         </div>
+        )
     )
 }

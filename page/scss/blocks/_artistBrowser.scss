@@ -131,7 +131,7 @@
 
 .lastFM-artist-link{
     text-align: right;
-    padding-right: 50px;
+    padding-inline: 20px 50px;
     width: 50%;
     font-family: $font-lato;
     font-style: italic;
@@ -141,11 +141,11 @@
 
 .lastFM-artist-link--mobile{
     display: none;
+    padding-inline: 10px;
 
     @media(min-width: 480px)
     {
         display: block;
-        padding-right: 0;
     }
 
     @media(min-width: 680px)
