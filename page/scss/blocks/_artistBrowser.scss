@@ -164,21 +164,90 @@
 }
 
 
+.lack-of-details{
+    margin-top: 20px;
+    padding: 5px 10px;
+    font-size: $p-mobile-size;
+    line-height: $line-height;
+    text-align: center;
+    color: $color-red;
+
+    @media(min-width: 850px){
+        font-size: $p-size;
+        padding: 10px 20px;
+    }
+}
+
 .details-box{
     font-size: $p-mobile-size;
+    line-height: $line-height;
     margin-top: 20px;
-    height: 200px;
+    padding: 5px 10px;
+    min-height: 200px;
     width: 100%;
     background-color: $color-grey-light;
     border-radius: $border-radius;
 
-    p{
-        padding-top: 100px;
+    @media(min-width: 850px){
+        font-size: $p-size;
+        padding: 10px 20px;
+    }
+}
+
+.details__header{
+    display: flex;
+    line-height: $line-height;
+
+    h3{
+        width: 50%;
         text-align: center;
+        color: $color-red;
     }
 
     @media(min-width: 850px){
-        height: 300px;
+        font-size: 1.6rem;
+        padding: 10px 20px;
+    }
+}
+
+.details__artistinfo{
+    display: flex;
+}
+
+.artistinfo__stats{
+    width: 50%;
+    overflow: auto;
+
+    span{
+        color: $color-red;
+    }
+}
+
+.artistinfo__playcount, .artistinfo__listeners{
+    border-bottom: 2px solid $color-white-opacity;
+    display: flex;
+    justify-content: space-between;
+}
+
+.artistinfo__toptracks{
+    width: 50%;
+    margin-left: 30px;
+    overflow: auto;
+    white-space: nowrap;
+
+    span{
+        display: inline-block;
+        color: $color-red;
+        width: 35px;
+        height: 100%;
+    }
+}
+
+.genre-box--browser{
+    text-transform: capitalize;
+    font-size: $p-mobile-size;
+
+    @media(min-width: 850px){
         font-size: $p-size;
     }
 }

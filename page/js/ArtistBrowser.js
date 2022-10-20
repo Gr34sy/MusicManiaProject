@@ -5,8 +5,10 @@ export function ArtistBrowser(){
     const [browserFilter,setBrowserFilter] = useState([]);
 
     const [detailsFilterValue, setDetailsFilterValue] = useState()
-    const [artistDetails, setArtistDetails] = useState({name: "Click on artist to get details!"});
-    const [artistTopTracks, setArtistTopTracks] = useState();
+
+    const [areDetailsVisible, setAreDetailsVisible] = useState(false)
+    const [artistDetails, setArtistDetails] = useState({name: "Click on artist to get details!",stats: {playcount: 0, listeners: 0}, tags:{tag:[]}});
+    const [artistTopTracks, setArtistTopTracks] = useState([]);
     
     const rootAPI = 'http://ws.audioscrobbler.com/2.0';
     const keyAPI = '4d2a662e3ae0be5759a731d889e084d1';
@@ -42,7 +44,7 @@ export function ArtistBrowser(){
             .catch(err => console.error(err));
 
             //setting toptracks state
-            fetch(`${rootAPI}/?method=artist.getinfo&artist=${detailsFilterValue}&api_key=${keyAPI}&format=json`)
+            fetch(`${rootAPI}/?method=artist.gettoptracks&artist=${detailsFilterValue}&api_key=${keyAPI}&format=json`)
             .then(response => {
                 if(response.ok){
                     return response
@@ -50,7 +52,7 @@ export function ArtistBrowser(){
                 throw Error(response.status);
             })
             .then(response => response.json())
-            .then ( data => setArtistTopTracks(data))
+            .then ( data => setArtistTopTracks(data.toptracks.track))
             .catch(err => console.error(err))
         }
     }, [detailsFilterValue]);
@@ -61,7 +63,12 @@ export function ArtistBrowser(){
     }
 
     function handleLineClick(e){
+        e.preventDefault();
         setDetailsFilterValue(e.target.getAttribute('data-name'));
+
+        if(areDetailsVisible===false){
+            setAreDetailsVisible(true);
+        }
     }
 
     return(
@@ -86,7 +93,7 @@ export function ArtistBrowser(){
                                 </p> 
 
                                 <a href={artist.url} className="lastFM-artist-link lastFM-artist-link--screen" target="_blank">
-                                    Check out this artist on last.fm!
+                                    Check out this artist on Last.fm!
                                 </a>
 
                                 {/* mobile link */}
@@ -98,9 +105,48 @@ export function ArtistBrowser(){
                     </ul>
                 </div>
 
+                <p className="lack-of-details"  style={areDetailsVisible ? {display: 'none'} : {display: 'block'}}>Click on artist for more details</p>
+                <div className="details-box" style={areDetailsVisible ? {display: 'block'} : {display: 'none'}}>
+                    <div className="details__header">
+                        <h3>{artistDetails.name}</h3>
+                        <h3>Top Tracks:</h3>
+                    </div>
+                    <div className="details__artistinfo">
+                        <div className="artistinfo__stats">
+                            <p className="artistinfo__playcount">
+                                <span>Playcount:</span>{artistDetails.stats.playcount}
+                            </p>
 
-                <div className="details-box">
-                    <p>{artistDetails.name}</p>
+                            <p className="artistinfo__listeners">
+                                <span>Listeners:</span>{artistDetails.stats.playcount}
+                            </p>
+
+                            <p className="artistinfo__tags">
+                                <span>Tags:</span><br/>
+                                {artistDetails.tags.tag.map(
+                                    (tag)=>
+                                    (<div className="genre-box--browser">
+                                        {tag.name}
+                                    </div>)
+                                )}
+                            </p>
+                        </div>
+                
+                        <ul className="artistinfo__toptracks">
+                        {artistTopTracks
+                        .filter(
+                            (track,id)=>(
+                                id<10
+                            )
+                        )
+                        .map(
+                            (track,id)=>(
+                                <li key={id}><span>{id+1}</span>{track.name}</li>
+                            )
+                        )}
+                        </ul>
+                    </div>
+                    
                 </div>
                 
             </div>
