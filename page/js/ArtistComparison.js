@@ -13,7 +13,6 @@ export function ArtistComparison(){
 
     useEffect(()=>{
         if(comparisonFilter){
-            //setting artistdetails state
             fetch(`${rootAPI}/?method=artist.getsimilar&artist=${comparisonFilter}&api_key=${keyAPI}&format=json`)
             .then(response => {
                 if(response.ok){
@@ -24,6 +23,10 @@ export function ArtistComparison(){
             .then(response => response.json())
             .then ( data => setComparisonData(data.similarartists.artist))
             .catch(err => console.error(err));
+
+            return () => {
+                setComparisonData();
+            }
         }
     },[comparisonFilter])
 
@@ -43,15 +46,16 @@ export function ArtistComparison(){
                     Search artists similar to your <span>favorite!</span>
                 </h2>
 
-                <form className="comparison__form">
+                <form className="comparison__form" onSubmit={handleSearch}>
                     <input type="text" className="comparison__input" onChange={handleInputChange} value={inputValue}/>
-                    <button className="main-page__button" onClick={handleSearch}>Search</button>
+                    <button className="main-page__button" type="submit">Search</button>
                 </form>
                 <div className="card-box">
-                    {comparisonFilter && <Card artist={comparisonFilter}/>}
-                    {comparisonData
+                    {comparisonData && comparisonFilter && <Card artist={comparisonFilter} key={0}/>}
+                    {comparisonData && 
+                    comparisonData
                     .filter((artist,id)=>id<7)
-                    .map((artist, id)=> <Card artist={artist.name} key={id}/>)
+                    .map((artist, id)=> <Card artist={artist.name} key={id+1}/>)
                     }
                 </div>
             </div>

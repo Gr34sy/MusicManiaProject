@@ -9,9 +9,10 @@ export function Card({artist}){
     const[artistData, setArtistData] = useState();
     const[artistAlbums, setArtistAlbums] = useState();
     const[artistTags, setArtistTags] = useState();
+    const[artistTopTracks, setArtistTopTracks] = useState();
 
     useEffect(()=>{
-
+        //artist data
         fetch(`${rootAPI}/?method=artist.getinfo&artist=${artist}&api_key=${keyAPI}&format=json`)
         .then(response => {
             if(response.ok){
@@ -23,6 +24,7 @@ export function Card({artist}){
         .then ( data => setArtistData(data.artist))
         .catch(err => console.error(err));
 
+        //top top albums
         fetch(`${rootAPI}/?method=artist.gettopalbums&artist=${artist}&api_key=${keyAPI}&format=json`)
         .then(response => {
             if(response.ok){
@@ -34,6 +36,7 @@ export function Card({artist}){
         .then ( data => setArtistAlbums(data.topalbums.album))
         .catch(err => console.error(err));
 
+        //top tags
         fetch(`${rootAPI}/?method=artist.gettoptags&artist=${artist}&api_key=${keyAPI}&format=json`)
         .then(response => {
             if(response.ok){
@@ -44,11 +47,22 @@ export function Card({artist}){
         .then(response => response.json())
         .then ( data => setArtistTags(data.toptags.tag))
         .catch(err => console.error(err));
-        
+
+        //top tracks
+        fetch(`${rootAPI}/?method=artist.gettoptracks&artist=${artist}&api_key=${keyAPI}&format=json`)
+        .then(response => {
+            if(response.ok){
+                return response
+            }
+            throw Error(response.status);
+        })
+        .then(response => response.json())
+        .then ( data => setArtistTopTracks(data.toptracks.track))
+        .catch(err => console.error(err));
     },[])
 
     return(
-        (artistData && artistAlbums && artistTags &&
+        (artistData && artistAlbums && artistTags && artistTopTracks &&
         <div className="card">
             <figure>
                 <img src="../images/Hu wallpaper 2.jpg" alt="HU" className="card__img"/>
@@ -57,7 +71,7 @@ export function Card({artist}){
                 </figcaption>
             </figure>
 
-            <LabTabs albums={artistAlbums}/>
+            <LabTabs albums={artistAlbums} toptracks={artistTopTracks}/>
 
             <div className="card__genres">
 

@@ -10,13 +10,13 @@ export function ArtistBrowser(){
 
     const [detailsFilterValue, setDetailsFilterValue] = useState()
 
-    const [areDetailsVisible, setAreDetailsVisible] = useState(false)
-    const [artistDetails, setArtistDetails] = useState({name: "Click on artist to get details!",stats: {playcount: 0, listeners: 0}, tags:{tag:[]}});
+    const [artistDetails, setArtistDetails] = useState();
     const [artistTopTracks, setArtistTopTracks] = useState([]);
     
     
 
     useEffect(() => {
+
         fetch(`${rootAPI}/?method=tag.gettopartists&tag=${browserFilterValue}&api_key=${keyAPI}&format=json`)
         .then(response => {
             if(response.ok){
@@ -67,10 +67,6 @@ export function ArtistBrowser(){
     function handleLineClick(e){
         e.preventDefault();
         setDetailsFilterValue(e.target.getAttribute('data-name'));
-
-        if(areDetailsVisible===false){
-            setAreDetailsVisible(true);
-        }
     }
 
     return(
@@ -107,8 +103,9 @@ export function ArtistBrowser(){
                     </ul>
                 </div>
 
-                <p className="lack-of-details"  style={areDetailsVisible ? {display: 'none'} : {display: 'block'}}>Click on artist for more details</p>
-                <div className="details-box" style={areDetailsVisible ? {display: 'block'} : {display: 'none'}}>
+                {!artistDetails && (<p className="lack-of-details">Click on artist for more details</p>)}
+
+                {artistDetails &&(<div className="details-box">
                     <div className="details__header">
                         <h3>{artistDetails.name}</h3>
                         <h3>Top Tracks:</h3>
@@ -148,8 +145,7 @@ export function ArtistBrowser(){
                         )}
                         </ul>
                     </div>
-                    
-                </div>
+                </div>)}
                 
             </div>
         </section>

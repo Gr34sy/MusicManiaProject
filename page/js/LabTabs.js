@@ -5,7 +5,7 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 
-export default function LabTabs({albums}) {
+export default function LabTabs({albums , toptracks}) {
   const [value, setValue] = React.useState('1');
 
   const handleChange = (event, newValue) => {
@@ -22,7 +22,7 @@ export default function LabTabs({albums}) {
             <Tab label="Top Tracks" value="3"/>
           </TabList>
         </Box>
-        <TabPanel value="1" className="tabPanel custom-scrollbar">
+        <TabPanel value="1" className="tabPanel">
           <ul className="card__members">
             <li>Dylan „Funny Man” Alvarez</li>
             <li>Jorel „J-Dog” Decker</li>
@@ -32,20 +32,25 @@ export default function LabTabs({albums}) {
           </ul>
         </TabPanel>
 
-        <TabPanel value="2" className="tabPanel custom-scrollbar">
+        <TabPanel value="2" className="tabPanel">
           <ul className="card__discography">
             {albums
             .filter((album,id)=>id<16)
             .map(
               (album,id)=>
-              (<li key={id}>{album.name}</li>)
+              (<li key={id}><i className="fa-solid fa-compact-disc custom-list-icon"/>{album.name}</li>)
             )}
           </ul>
         </TabPanel>
 
-        <TabPanel value="3" className="tabPanel custom-scrollbar kupa chuj dupa cyce wadowice">
+        <TabPanel value="3" className="tabPanel">
           <ul className="card__toptracks">
-            <li><i className="fa-solid fa-music"></i>El Paso</li>
+            {toptracks
+            .filter((track,id)=>id<16)
+            .map(
+              (track,id)=>
+              (<li key={id}><i className="fa-solid fa-music custom-list-icon"/>{track.name}</li>)
+            )}
           </ul>
         </TabPanel>
 

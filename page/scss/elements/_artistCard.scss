@@ -58,15 +58,15 @@
     }
 }
 
-.card__members,.card__discography{
+.card__members{
     list-style-type: circle;
 }
 
-.card__concerts{
+.card__concerts, .card__discography{
     list-style-type: none;
 }
 
-.fa-music{
+.custom-list-icon{
     margin-right: 5px;
     font-size: 0.8em;
     font-weight: light;
