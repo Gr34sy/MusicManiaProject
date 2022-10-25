@@ -15,5 +15,17 @@
 }
 
 .input--favorites{
-    width: 45%;
+    width: 80%;
+
+    &::placeholder{
+        opacity: 0;
+
+        @media(min-width: 450px){
+            opacity: 1;
+        }
+    }
+
+    @media(min-width:850px){
+        width: 45%;
+    }
 }

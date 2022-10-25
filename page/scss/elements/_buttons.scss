@@ -21,8 +21,8 @@
 }
 
 .button--delete{
-    padding: 5px;
-    font-size: calc($button-size/1.8);
+    padding: 2px;
+    font-size: calc($button-size/2);
     background-color: $color-black;
     color: $color-red;
     border: 1px solid $color-red;
@@ -30,5 +30,10 @@
 
     &:hover{
         background-color: $color-black;
+    }
+
+    @media(min-width:650px){
+        padding: 5px;
+        font-size: calc($button-size/1.8);
     }
 }

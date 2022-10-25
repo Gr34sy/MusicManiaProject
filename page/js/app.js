@@ -11,15 +11,15 @@ import { YourFavorites } from "./YourFavorites";
 function App(){
     return(
         <>
-        <YourFavorites/>
+        {/* <YourFavorites/> */}
         
-        {/* <Navbar/>
+        <Navbar/>
             
         <Hero/>
 
         <ArtistBrowser/>
 
-        <ArtistComparison/> */}
+        <ArtistComparison/>
 
         </>
     )
