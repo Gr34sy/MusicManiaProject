@@ -3,6 +3,18 @@
     min-height: 50vh;
     background-color: $color-white;
     padding: $section-padding 0;
+
+    .custom-list{
+        p{
+            cursor: pointer;
+        }
+
+        li:nth-child(2n){
+            .lastFM-artist-link{
+                color: $color-grey-dark;
+            }
+        }
+    }
 }
 
 .browser-box{
@@ -37,6 +49,8 @@
     }
 }
 
+
+
 .browser__filter{
     appearance: none;
     cursor: pointer;
@@ -56,76 +70,6 @@
     @media(min-width: 850px){
         padding: 10px 20px;
         font-size: calc($h-size*0.6);
-    }
-}
-
-.browser-list-box{
-    box-sizing: border-box;
-    padding: 10px;
-    background-color: $color-grey-light;
-    border-bottom-right-radius: $border-radius;
-    border-bottom-left-radius: $border-radius;
-}
-
-.browser__list{
-    box-sizing: border-box;
-    padding: 0 10px;
-    width: 100%;
-    height: 200px;
-    overflow-x: auto;
-    overflow-y: auto;
-
-    @media(min-width: 850px){
-        height: 300px;
-    }
-
-    li{
-        display: flex;
-        white-space: nowrap;
-        font-size: $p-mobile-size;
-        padding: 5px;
-
-        @media(min-width: 850px){
-            font-size: $p-size;
-            padding: 10px;
-        }
-    }
-
-    li:first-child{
-        padding-top: 0;
-    }
-
-    li::before{
-        content:'Artist: ';
-        padding-right: 5px;
-        color: $color-red;
-        font-family: $font-marker;
-        letter-spacing: 1px;
-        font-size: $p-mobile-size*1.2;
-
-        @media(min-width: 850px){
-            font-size: $p-size*1.2;
-        }
-    }
-
-    li:nth-child(2n){
-        color: $color-grey-dark;
-        background-color: $color-white-opacity;
-
-        .lastFM-artist-link{
-            color: $color-grey-dark;
-        }
-    }
-
-    p{
-        cursor: pointer;
-        width: 50%;
-        padding-left: 0;
-        
-        @media(min-width: 480px)
-        {
-            padding-left: 50px;
-        }
     }
 }
 

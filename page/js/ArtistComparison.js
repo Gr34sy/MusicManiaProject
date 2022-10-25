@@ -47,8 +47,8 @@ export function ArtistComparison(){
                 </h2>
 
                 <form className="comparison__form" onSubmit={handleSearch}>
-                    <input type="text" className="comparison__input" onChange={handleInputChange} value={inputValue}/>
-                    <button className="main-page__button" type="submit">Search</button>
+                    <input type="text" className="custom-input" onChange={handleInputChange} value={inputValue}/>
+                    <button className="custom-button" type="submit">Search</button>
                 </form>
                 <div className="card-box">
                     {comparisonData && comparisonFilter && <Card artist={comparisonFilter} key={0}/>}

@@ -6,18 +6,20 @@ import {Navbar} from "./Navbar";
 import { Hero } from "./Hero";
 import { ArtistBrowser } from "./ArtistBrowser";
 import { ArtistComparison } from "./ArtistComparison";
+import { YourFavorites } from "./YourFavorites";
 
 function App(){
     return(
         <>
-
-        <Navbar/>
+        <YourFavorites/>
+        
+        {/* <Navbar/>
             
         <Hero/>
 
         <ArtistBrowser/>
 
-        <ArtistComparison/>
+        <ArtistComparison/> */}
 
         </>
     )

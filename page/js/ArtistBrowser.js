@@ -81,11 +81,11 @@ export function ArtistBrowser(){
                     <option value="nu metal">Nu Metal</option>
                     <option value="rock">Rock</option>
                 </select>
-                <div className="browser-list-box">
-                    <ul className="browser__list">
+                <div className="custom-list-box">
+                    <ul className="custom-list">
                         {browserFilter.map(
                             (artist, id)=>(
-                            <li key={id}>
+                            <li key={id} className="artist-line">
                                 <p data-name={artist.name} onClick={handleLineClick}>
                                     {artist.name}
                                 </p> 
