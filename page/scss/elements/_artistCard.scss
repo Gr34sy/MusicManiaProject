@@ -2,7 +2,7 @@
 .card{
     box-sizing: border-box;
     width: 350px;
-    min-height: 600px;
+    min-height: 550px;
     padding: 0.625rem;
     display: flex;
     gap: 10px;
@@ -20,6 +20,8 @@
 .card__img{
     width: 100%;
     border-radius: $border-radius;
+    color: white;
+    font-family: $font-lato;
 }
 
 .card__title{
@@ -35,7 +37,7 @@
     }
 }
 
-.card__members, .card__discography, .card__concerts{
+.card__members, .card__discography, .card__toptracks{
     white-space: nowrap;
     
     font-size: $p-mobile-size;
@@ -62,21 +64,18 @@
     list-style-type: circle;
 }
 
-.card__discography{
-    list-style-type: upper-roman;
-}
-
-.card__concerts{
+.card__concerts, .card__discography{
     list-style-type: none;
 }
 
-.fa-music{
+.custom-list-icon{
     margin-right: 5px;
     font-size: 0.8em;
     font-weight: light;
 }
 
 .card__genres{
+    text-transform: capitalize;
     width: 98%;
     min-height: 30px;
     display: flex;

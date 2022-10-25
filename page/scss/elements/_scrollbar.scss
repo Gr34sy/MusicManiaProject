@@ -1,6 +1,26 @@
-::-webkit-scrollbar{
+body::-webkit-scrollbar{
     width: 1.2rem;
     height: 1.2rem;
+}
+
+body::-webkit-scrollbar-corner { 
+    background: transparent; 
+}
+
+body::-webkit-scrollbar-track{
+    background-color: $color-grey-dark;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: $color-white-transparent;
+    border-radius: $border-radius;
+    border: 5px solid $color-grey-dark;
+}
+
+
+::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.5rem;
 }
 
 ::-webkit-scrollbar-corner { 
@@ -8,96 +28,12 @@
 }
 
 ::-webkit-scrollbar-track{
-    background-color: $color-grey-dark;
+    background-color:  transparent;
+    border-radius: $border-radius;
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: $color-white-transparent;
+    background-color: $color-grey-dark;
     border-radius: $border-radius;
-    border: 5px solid $color-grey-dark;
 }
 
-
-.browser__list{
-    &::-webkit-scrollbar{
-        width: 0.5rem;
-        height: 0.5rem;
-    }
-
-    &::-webkit-scrollbar-corner { 
-        background: transparent; 
-    }
-
-    &::-webkit-scrollbar-track{
-        background-color:  transparent;
-        border-radius: $border-radius;
-    }
-
-    &::-webkit-scrollbar-thumb{
-        background-color: $color-white-transparent;
-        border-radius: $border-radius;
-    }
-}
-
-.card__members, .card__discography, .card__concerts{
-    &::-webkit-scrollbar{
-        width: 0.5rem;
-        height: 0.5rem;
-    }
-
-    &::-webkit-scrollbar-corner { 
-        background: transparent; 
-    }
-
-    &::-webkit-scrollbar-track{
-        background-color:  transparent;
-        border-radius: $border-radius;
-    }
-
-    &::-webkit-scrollbar-thumb{
-        background-color: $color-white-transparent;
-        border-radius: $border-radius;
-    }
-}
-
-.artistinfo__toptracks{
-    &::-webkit-scrollbar{
-        width: 0.5rem;
-        height: 0.5rem;
-    }
-
-    &::-webkit-scrollbar-corner { 
-        background: transparent; 
-    }
-
-    &::-webkit-scrollbar-track{
-        background-color:  transparent;
-        border-radius: $border-radius;
-    }
-
-    &::-webkit-scrollbar-thumb{
-        background-color: $color-white-transparent;
-        border-radius: $border-radius;
-    }
-}
-
-.artistinfo__stats{
-    &::-webkit-scrollbar{
-        width: 0.5rem;
-        height: 0.5rem;
-    }
-
-    &::-webkit-scrollbar-corner { 
-        background: transparent; 
-    }
-
-    &::-webkit-scrollbar-track{
-        background-color:  transparent;
-        border-radius: $border-radius;
-    }
-
-    &::-webkit-scrollbar-thumb{
-        background-color: $color-white-transparent;
-        border-radius: $border-radius;
-    }
-}
