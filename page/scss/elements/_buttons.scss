@@ -4,6 +4,7 @@
     border: 2px solid $color-white;
     color: $color-white;
     font-family: $font-bebas;
+    text-align: center;
     font-size: calc($button-size/1.5);
     padding: 5px 10px;
 
@@ -16,5 +17,18 @@
     @media(min-width:650px){
         padding: 5px 20px;
         font-size: $button-size;
+    }
+}
+
+.button--delete{
+    padding: 5px;
+    font-size: calc($button-size/1.8);
+    background-color: $color-black;
+    color: $color-red;
+    border: 1px solid $color-red;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $color-black;
     }
 }

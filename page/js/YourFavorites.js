@@ -3,7 +3,7 @@ import React from "react";
 export function YourFavorites(){
     return(
         <main className="favorites__container">
-            <h1  className="favorites__title">These are your <span>favorites:</span></h1>
+            <h1  className="favorites__title">These are your <span>favorites!</span></h1>
 
             <h2 className="favorites__type">Artists</h2>
             <section className="custom-list-box">
@@ -12,8 +12,8 @@ export function YourFavorites(){
                     <button type="text"className="custom-button">Add </button>
                 </form>
                 <ul className="custom-list">
-                    <li className="artist-line"><p>kupas</p></li>
-                    <li className="artist-line"><p>kupas</p></li>
+                    <li className="artist-line"><p>kupas</p> <button className="custom-button button--delete">Delete</button></li>
+                    <li className="artist-line"><p>kupas</p> <button className="custom-button button--delete">Delete</button></li>
                 </ul>
             </section>
 
