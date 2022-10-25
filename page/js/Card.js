@@ -59,18 +59,21 @@ export function Card({artist}){
         .then(response => response.json())
         .then ( data => setArtistTopTracks(data.toptracks.track))
         .catch(err => console.error(err));
+
     },[])
+
 
     return(
         (artistData && artistAlbums && artistTags && artistTopTracks &&
         <div className="card">
-            <figure>
-                <img src="../images/Hu wallpaper 2.jpg" alt="HU" className="card__img"/>
+            {/* <figure> 
+                <img src={'jkh'} alt="picture of an artist" className="card__img"/>
                 <figcaption>
                     <h3 className="card__title">{artistData.name}</h3>
                 </figcaption>
-            </figure>
-
+            </figure> */}
+            
+            <h3 className="card__title">{artistData.name}</h3>
             <LabTabs albums={artistAlbums} toptracks={artistTopTracks}/>
 
             <div className="card__genres">
@@ -103,11 +106,6 @@ export function Card({artist}){
                 </div>
             </div>
 
-            {/* <div className="card__social-media">
-                <a href="" className="sm-icon"><i className="fa-brands fa-square-facebook"></i></a>
-                <a href="" className="sm-icon"><i className="fa-brands fa-square-instagram"></i></a>
-                <a href="" className="sm-icon"><i className="fa-brands fa-youtube"></i></a>
-            </div> */}
         </div>
         )
     )

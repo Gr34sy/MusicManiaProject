@@ -6,7 +6,7 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 
 export default function LabTabs({albums , toptracks}) {
-  const [value, setValue] = React.useState('1');
+  const [value, setValue] = React.useState('2');
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -17,12 +17,12 @@ export default function LabTabs({albums , toptracks}) {
       <TabContext value={value} >
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <TabList onChange={handleChange} aria-label="lab API tabs example">
-            <Tab label="Band Members" value="1"/>
+            {/* <Tab label="Band Members" value="1"/> */}
             <Tab label="Discography" value="2"/>
             <Tab label="Top Tracks" value="3"/>
           </TabList>
         </Box>
-        <TabPanel value="1" className="tabPanel">
+        {/* <TabPanel value="1" className="tabPanel">
           <ul className="card__members">
             <li>Dylan „Funny Man” Alvarez</li>
             <li>Jorel „J-Dog” Decker</li>
@@ -30,7 +30,7 @@ export default function LabTabs({albums , toptracks}) {
             <li>Jordon „Charlie Scene” Terrell</li>
             <li>Daniel „Danny” Murillo </li>
           </ul>
-        </TabPanel>
+        </TabPanel> */}
 
         <TabPanel value="2" className="tabPanel">
           <ul className="card__discography">

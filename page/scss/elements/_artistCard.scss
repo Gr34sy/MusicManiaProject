@@ -2,7 +2,7 @@
 .card{
     box-sizing: border-box;
     width: 350px;
-    min-height: 600px;
+    min-height: 550px;
     padding: 0.625rem;
     display: flex;
     gap: 10px;
@@ -20,6 +20,8 @@
 .card__img{
     width: 100%;
     border-radius: $border-radius;
+    color: white;
+    font-family: $font-lato;
 }
 
 .card__title{
