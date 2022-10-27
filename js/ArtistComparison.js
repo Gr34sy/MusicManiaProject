@@ -3,7 +3,7 @@ import { Card } from "./Card";
 import { useEffect, useState } from "react";
 
 export function ArtistComparison(){
-    const rootAPI = 'http://ws.audioscrobbler.com/2.0';
+    const rootAPI = 'https://ws.audioscrobbler.com/2.0';
     const keyAPI = '4d2a662e3ae0be5759a731d889e084d1';
 
     const [inputValue, setInputValue] = useState('');
