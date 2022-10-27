@@ -4,7 +4,6 @@
     background-color: $color-grey-dark;
 
     @media(min-width: 1150px){
-        padding: 0;
         width: auto;
         padding: 0.8em 2em;
     }
@@ -28,5 +27,14 @@
     font-size: $h-mobile-size;
     @media(min-width: 1150px){
        font-size: 1.6rem;
+    }
+}
+
+.logotype--footer{
+    background-color: $color-grey-dark;
+    padding: 5px 10px;
+
+    @media(min-width: 1150px){
+        padding: 0.4em 1.5em;
     }
 }
