@@ -1,15 +1,15 @@
 const path = require("path");
 const webpack = require("webpack");
 
-const entryPath = ".";
+const entryPath = "./page";
 
 module.exports = {
   mode: "none",
-  entry: ["whatwg-fetch", `./js/app.js`],
+  entry: ["whatwg-fetch", `${entryPath}/js/app.js`],
   devtool: "inline-source-map",
   output: {
     filename: "out.js",
-    path: path.resolve(__dirname, `./build`),
+    path: path.resolve(__dirname, `${entryPath}/build`),
     clean: true,
   },
   devServer: {
