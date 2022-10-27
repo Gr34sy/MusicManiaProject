@@ -3,7 +3,7 @@ import LabTabs from "./LabTabs";
 import {useState, useEffect} from "react";
 
 export function Card({artist}){
-    const rootAPI = 'http://ws.audioscrobbler.com/2.0';
+    const rootAPI = 'https://ws.audioscrobbler.com/2.0';
     const keyAPI = '4d2a662e3ae0be5759a731d889e084d1';
 
     const[artistData, setArtistData] = useState();
