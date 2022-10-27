@@ -1,6 +1,6 @@
 import React from "react";
 import {Logotype} from "./Logotype";
-import { Link, Outlet } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 export function Navbar(){
     return(
@@ -27,7 +27,6 @@ export function Navbar(){
                 </ul>
             </div>
         </nav>
-        <Outlet/>
         </>
     )
 }
