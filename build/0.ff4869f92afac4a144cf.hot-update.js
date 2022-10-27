@@ -1,0 +1,19 @@
+self["webpackHotUpdatees6_react"](0,{
+
+/***/ 49:
+/***/ (() => {
+
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\Greasy\\Desktop\\wszystko\\strony\\projekty\\MusicManiaProject\\page\\js\\ArtistBrowser.js: Unterminated string constant. (8:62)\n\n\u001b[0m \u001b[90m  6 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  7 |\u001b[39m     \u001b[36mconst\u001b[39m [detailsFilterValue\u001b[33m,\u001b[39m setDetailsFilterValue] \u001b[33m=\u001b[39m useState()\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m     \u001b[36mconst\u001b[39m [artistDetails\u001b[33m,\u001b[39m setArtistDetails] \u001b[33m=\u001b[39m useState({name\u001b[33m:\u001b[39m \u001b[32m'Click on artist to get details!});\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  9 |\u001b[39m     \u001b[36mconst\u001b[39m [artistTopTracks\u001b[33m,\u001b[39m setArtistTopTracks] \u001b[33m=\u001b[39m useState()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 10 |\u001b[39m     \u001b[0m\n\u001b[0m \u001b[90m 11 |\u001b[39m     \u001b[36mconst\u001b[39m rootAPI \u001b[33m=\u001b[39m \u001b[32m'http://ws.audioscrobbler.com/2.0'\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n    at instantiate (C:\\Users\\Greasy\\Desktop\\wszystko\\strony\\projekty\\MusicManiaProject\\node_modules\\@babel\\parser\\lib\\index.js:72:32)\n    at constructor (C:\\Users\\Greasy\\Desktop\\wszystko\\strony\\projekty\\MusicManiaProject\\node_modules\\@babel\\parser\\lib\\index.js:367:12)\n    at JSXParserMixin.raise (C:\\Users\\Greasy\\Desktop\\wszystko\\strony\\projekty\\MusicManiaProject\\node_modules\\@babel\\parser\\lib\\index.js:3706:19)\n    at Object.unterminated (C:\\Users\\Greasy\\Desktop\\wszystko\\strony\\projekty\\MusicManiaProject\\node_modules\\@babel\\parser\\lib\\index.js:2503:20)\n    at readStringContents (C:\\Users\\Greasy\\Desktop\\wszystko\\strony\\projekty\\MusicManiaProject\\node_modules\\@babel\\parser\\lib\\index.js:2197:16)\n    at JSXParserMixin.readString (C:\\Users\\Greasy\\Desktop\\wszystko\\strony\\projekty\\MusicManiaProject\\node_modules\\@babel\\parser\\lib\\index.js:3569:9)\n    at JSXParserMixin.getTokenFromCode (C:\\Users\\Greasy\\Desktop\\wszystko\\strony\\projekty\\MusicManiaProject\\node_modules\\@babel\\parser\\lib\\index.js:3233:14)\n    at JSXParserMixin.getTokenFromCode (C:\\Users\\Greasy\\Desktop\\wszystko\\strony\\projekty\\MusicManiaProject\\node_modules\\@babel\\parser\\lib\\index.js:8239:18)\n    at JSXParserMixin.nextToken (C:\\Users\\Greasy\\Desktop\\wszystko\\strony\\projekty\\MusicManiaProject\\node_modules\\@babel\\parser\\lib\\index.js:2635:10)\n    at JSXParserMixin.next (C:\\Users\\Greasy\\Desktop\\wszystko\\strony\\projekty\\MusicManiaProject\\node_modules\\@babel\\parser\\lib\\index.js:2539:10)");
+
+/***/ })
+
+},
+/******/ function(__webpack_require__) { // webpackRuntimeModules
+/******/ /* webpack/runtime/getFullHash */
+/******/ (() => {
+/******/ 	__webpack_require__.h = () => ("6b5725d769578388e3e4")
+/******/ })();
+/******/ 
+/******/ }
+);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMC5mZjQ4NjlmOTJhZmFjNGExNDRjZi5ob3QtdXBkYXRlLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7VUFBQSIsInNvdXJjZXMiOlsid2VicGFjazovL2VzNi1yZWFjdC93ZWJwYWNrL3J1bnRpbWUvZ2V0RnVsbEhhc2giXSwic291cmNlc0NvbnRlbnQiOlsiX193ZWJwYWNrX3JlcXVpcmVfXy5oID0gKCkgPT4gKFwiNmI1NzI1ZDc2OTU3ODM4OGUzZTRcIikiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=
