@@ -13,8 +13,8 @@ export function Navbar(){
             <ul className="navlist">
                 <li><Link to="/">Main page</Link></li>
                 <li><Link to="/favorites">Your Favorites</Link></li>
-                <li><Link to="/ArtistsOfTheMonth">Artists Of The Month</Link></li>
-                <li><Link to="/SongsOfTheMonth">Songs Of The Month</Link></li>
+                <li><Link to="/artistsOfTheMonth">Artists Of The Month</Link></li>
+                <li><Link to="/songsOfTheMonth">Songs Of The Month</Link></li>
             </ul>
         </nav>
         <nav className="nav__dropdown">
