@@ -5,7 +5,7 @@ export function Add({additionalClass}){
     return(
         <aside className={classes}>
             <h3>
-                Place here your cool <span>add!</span>
+                Place here your <span>adds!</span>
             </h3>
         </aside>
     )
