@@ -17,7 +17,7 @@
 <p>-> Searching for similar artists</p>
 <p>-> Adding music artists to favourites </p>
 
-<br/> <br/> <br/> 
+<br/> 
 
 #### App Setup Instructions:
 <p>1. Download repo</p>
