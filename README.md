@@ -12,7 +12,7 @@
 <br/> <br/> <br/> 
 
 #### App Functionalities:
-<p>-> Filtering artists by music genre/p>
+<p>-> Filtering artists by music genre </p>
 <p>-> Displaying details of the chosen artists</p>
 <p>-> Searching for similar artists</p>
 <p>-> Adding music artists to favourites </p>
